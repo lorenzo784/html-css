@@ -1,0 +1,79 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.details {
+    padding: 24px 0;
+
+    &__company {
+        text-transform: uppercase;
+        color: v.$Orange;
+        font-weight: 700;
+        font-size: 0.8em;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        font-size: 1.7em;
+        margin-bottom: 16px;
+    }
+
+    &__description {
+        color: v.$Dark_grayish_blue;
+        font-size: 0.94em;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+
+    &__prices {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__now {
+        font-size: 1.8em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 18px
+    }
+
+    &__discount {
+        font-size: 0.5em;
+        background-color: v.$Pale_orange;
+        padding: 0 4px;
+        color: v.$Orange;
+    }
+
+    &__before {
+        font-weight: 700;
+        font-size: 0.8em;
+        color: v.$Dark_grayish_blue;
+        text-decoration: line-through;
+    }
+    &__btn {
+        @include mixins.button();
+        @media only screen and (min-width: 576px) {
+            flex: 1;
+            align-items: center;
+        }
+        
+    }
+
+    &__product-quantity {
+        @media only screen and (min-width: 576px) {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;;
+        justify-content: center;
+    }
+}

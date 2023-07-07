@@ -1,0 +1,58 @@
+@use 'variables';
+@use 'mixins';
+
+.gallery {
+    &__image-container {
+        background-image: url('./images/image-product-1.jpg');
+        background-size: cover;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        @media only screen and (min-width: 992px) {
+            cursor: pointer;
+        }
+    }
+
+    &__previous {
+        @include mixins.image-btn(left, 10px);
+
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__next {
+        @include mixins.image-btn(right, -10px);
+
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__thumbnails {
+        display: none;
+        @media only screen and (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+    }
+
+    &__thumbnail {
+        @media only screen and (min-width: 992px) {
+            width: 22%;
+            border-radius: 10px;
+            
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,63 @@
+@use 'variables' as v;
+
+@mixin modal-background () {
+    background-color: v.$Black_op;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+
+@mixin image-btn ($lado, $position-x) {
+    background-color: v.$White;
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    padding: 8px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    @if $lado == left {
+        left: 0;
+        transform: translate($position-x, -50%);
+    } @else if $lado == right {
+        right: 0;
+        transform: translate($position-x, -50%);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin changeNumber ($pv, $ph) {
+    width: 56px;
+    height: 100%;
+    padding: $pv $ph;
+    background-color: v.$Light_grayish_blue;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+@mixin button () {
+    font-family: v.$Font;
+    font-size: 0.9em;
+    font-weight: 700;
+    background-color: v.$Orange;
+    color: v.$White;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}

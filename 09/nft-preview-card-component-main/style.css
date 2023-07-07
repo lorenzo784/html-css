@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --Soft_blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%, 0.5);
+    /* (main BG) */
+    --Very_dark_blue_main: hsl(217, 54%, 11%);
+    /* (card BG) */
+    --Very_dark_blue_card: hsl(216, 50%, 16%);
+    /* (line) */
+    --Very_dark_blue_line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Very_dark_blue_main);
+    font-size: 18px;
+}
+
+.main-container {
+    width: 330px;
+    height: 546px;
+    margin: 60px auto;
+    border-radius: 16px;
+    padding: 26px;
+    background-color: var(--Very_dark_blue_card);
+}
+
+.image {
+    background-image: url(images/image-equilibrium.jpg);
+    width: 280px;
+    height: 280px;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 26px;
+    overflow: hidden;
+}
+
+.eye-image {
+    background-color: var(--Cyan);
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.eye-image:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+h1 {
+    color: var(--White);
+    font-size: 1.3em;
+    margin-bottom: 18px;
+}
+
+.description {
+    font-size: 0.9em;
+    color: var(--Soft_blue);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    color: var(--Cyan);
+}
+
+.value img {
+    margin-right: 10px;
+}
+
+.time {
+    color: var(--Soft_blue);
+    display: flex;
+    align-items: center;
+}
+
+.time img {
+    margin-right: 5px;
+}
+
+.line {
+    border-top: 1px solid var(--Soft_blue);
+    margin-bottom: 10px;
+}
+
+.creator-container {
+    display: flex;
+    align-items: center;
+}
+
+.photo {
+    background-image: url(images/image-avatar.png);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-size: cover;
+    border: 1px solid var(--White);
+    margin-right: 10px;
+}
+
+.creator {
+    color: var(--Soft_blue);
+}
+
+.creator span {
+    color: var(--White);
+}
+
+.title:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 900px) {
+    .main-container {
+        width: 354px;
+        height: 600px;
+    }
+
+    .image{
+        width: 300px;
+        height: 300px;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .line {
+        margin-bottom: 20px;
+    }
+}

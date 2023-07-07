@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="section-1">
+      <h1>Learn to code by watching others</h1>
+      <p class="description">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+      </p>
+    </div>
+
+    <div class="section-2">
+      <div class="offer"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
+      <div class="form-container">
+        <form action="">
+          <input id="firstNameInput"  type="text" placeholder="First Name">
+          <div class="error-container" id="firstNameError">
+            <!-- <img src="./images/icon-error.svg" alt="" class="icon-error">
+            <p class="error">Firts name cannot be empty</p> -->
+          </div>
+          <input id="lastNameInput" type="text" placeholder="Last Name">
+          <div class="error-container" id="lastNameError">
+            <!-- <img src="./images/icon-error.svg" alt="" class="icon-error">
+            <p class="error">Last name cannot be empty</p> -->
+          </div>
+          <input id="emailInput" type="email" placeholder="Email Address">
+          <div class="error-container" id="emailError">
+            <!-- <img src="./images/icon-error.svg" alt="" class="icon-error">
+            <p class="error">error</p> -->
+          </div>
+          <input id="passwordInput" type="password" placeholder="Password">
+          <div class="error-container" id="passwordError">
+            <!-- <img src="./images/icon-error.svg" alt="" class="icon-error">
+            <p class="error">error</p> -->
+          </div>
+          <input type="submit" value="Claim your free trial" id="button">
+        </form>
+        
+        <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+      </div>
+    </div>
+
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Lorenzo López</a>.
+    </p>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+</html>

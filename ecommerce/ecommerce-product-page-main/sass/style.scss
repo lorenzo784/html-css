@@ -1,0 +1,59 @@
+@use 'initial';
+@use 'variables';
+@use 'header';
+@use 'navbar';
+@use 'modal-navbar';
+@use 'gallery';
+@use 'details';
+@use 'input';
+@use 'modal-cart';
+@use 'modal-gallery';
+
+
+.main-container {
+    margin: 0 auto;
+    min-height: 375px;
+    max-width: 1115px;
+    padding: 0 16px;
+    @media only screen and (min-width: 992px) {
+        margin-top: 100px;
+    }
+    min-height: 80vh;
+}
+
+.content {
+    @media only screen and (min-width: 992px) {
+        display: flex;
+        gap: 100px;
+    }
+}
+
+.cart-empty {
+    color: variables.$Dark_grayish_blue;
+    font-weight: 400;
+    text-align: center;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.footer {
+    flex-shrink: 0;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

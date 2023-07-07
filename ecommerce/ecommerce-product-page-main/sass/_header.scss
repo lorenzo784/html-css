@@ -1,0 +1,76 @@
+@use 'variables';
+
+.header {
+    margin: 0 auto;
+    max-width: 1115px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: relative;
+
+    &__left {
+        display: flex;
+    }
+
+    @media only screen and (min-width: 992px){
+        height: 80px;
+        border-bottom: 1px solid variables.$Grayish_blue;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__menu {
+        &:hover {
+            cursor: pointer;
+        }
+        @media only screen and (min-width: 992px){
+            display: none;
+        }
+    }
+
+    &__cart-avatar {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    
+    &__cart {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+    }
+
+    &__cart-icon {
+        &--notification {
+            background-color: variables.$Orange;
+            font-family: variables.$Font;
+            font-size: 0.7em;
+            font-weight: 700;
+            color: variables.$White;
+            padding: 0 5px;
+            border-radius: 50%;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+        }
+    }
+
+
+
+    &__avatar {
+        width: 30px;
+        height: 30px;
+
+        &:hover {
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1px solid variables.$Orange
+        }
+    }
+}
